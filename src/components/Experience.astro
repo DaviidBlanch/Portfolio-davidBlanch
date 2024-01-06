@@ -1,0 +1,34 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        date: "march 2023 - present · 11 months",
+        title: "JUNIOR SOFTWARE ENGINEER - Capgemini",
+        description: [
+            "• Gestión de incidentes y Small Works/Tasks en Aarhus, Dinamarca (React, TypeScript).",
+            "• Desarrollo de proyectos internos (Angular, GitLab).",
+        ],
+    },
+    {
+        date: "june 2022 - december 2022 · 7 months",
+        title: "CLOUD & CUSTOM APPLICATIONS INTERN - Capgemini",
+        description: [
+            "• Desarrollo web utilizando SQL developer, Java y JavaScript.",
+            "• CRUD en React y Angular.",
+            "• Gestión de Git.",
+            "• Gestión de actividades en JIRA.",
+            "• Inserción masiva de datos en PostgreSQL.",
+        ],
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-2">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
