@@ -1,0 +1,137 @@
+---
+import ReactJS from "../icons/ReactJs.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import TailwindCSS from "../icons/TailwindCSS.astro";
+import NodeJS from "../icons/NodeJS.astro";
+import ExpressJS from "../icons/ExpressJS.astro";
+import MongoDB from "../icons/MongoDB.astro";
+
+const PROJECTS = [
+    {
+        title: "devQ",
+        description:
+            "Website for technical interview questions and interviews for the developer world.",
+        link: "https://devq.vercel.app/",
+        github: "https://github.com/DaviidBlanch/devQ",
+        image: "/projects/devQ.webp",
+        frontend: [
+            {
+                id: 1,
+                nombre: "ReactJS",
+                color: "#087EA4",
+                icon: ReactJS,
+            },
+            {
+                id: 2,
+                nombre: "TypeScript",
+                color: "#3178c6",
+                icon: TypeScript,
+            },
+            {
+                id: 3,
+                nombre: "TailwindCSS",
+                color: "#38bdf8",
+                icon: TailwindCSS,
+            },
+        ],
+        backend: [
+            {
+                id: 1,
+                nombre: "NodeJS",
+                color: "#026E00",
+                icon: NodeJS,
+            },
+            {
+                id: 2,
+                nombre: "ExpressJS",
+                color: "#353535",
+                icon: ExpressJS,
+            },
+            {
+                id: 3,
+                nombre: "MongoDB",
+                color: "#42494f",
+                icon: MongoDB,
+            },
+        ],
+    },
+    {
+        title: "4day",
+        description:
+            "Professional social network to promote temporary contracts and increase employability in the hospitality sector.",
+        link: "#",
+        github: "#",
+        image: "/projects/4day.webp",
+        frontend: [
+            {
+                id: 1,
+                nombre: "ReactJS",
+                color: "#087EA4",
+                icon: ReactJS,
+            },
+            {
+                id: 2,
+                nombre: "TypeScript",
+                color: "#3178c6",
+                icon: TypeScript,
+            },
+        ],
+        backend: [
+            {
+                id: 1,
+                nombre: "NodeJS",
+                color: "#026E00",
+                icon: NodeJS,
+            },
+            {
+                id: 2,
+                nombre: "ExpressJS",
+                color: "#353535",
+                icon: ExpressJS,
+            },
+            {
+                id: 3,
+                nombre: "MongoDB",
+                color: "#42494f",
+                icon: MongoDB,
+            },
+        ],
+    },
+];
+---
+
+{
+    PROJECTS.map(
+        ({ title, description, link, github, image, frontend, backend }) => (
+            <article class="mb-10">
+                <h3 class="text-2xl font-semibold text-sky-300 mb-2">
+                    {title}
+                </h3>
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex gap-x-2 flex-row mb-2">
+                    {frontend.map((front) => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2`}>
+                                <front.icon class="size-4" />
+                                {front.nombre}
+                            </span>
+                        </li>
+                    ))}
+                    {backend.map((back) => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2`}>
+                                <back.icon class="size-4" />
+                                {back.nombre}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <img
+                    class="rounded shadow-2xl shadow-white/10"
+                    src={image}
+                    alt={`Screenshot of ${image}`}
+                />
+            </article>
+        ),
+    )
+}

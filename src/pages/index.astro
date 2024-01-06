@@ -8,9 +8,12 @@ import GitHubIcon from "../../src/icons/GitHub.astro";
 import MailIcon from "../../src/icons/Mail.astro";
 import ExperienceIcon from "../../src/icons/Experience.astro";
 import CodeIcon from "../../src/icons/Code.astro";
-import AboutIcon from "../../src/icons/About.astro";
+import AboutIcon from "../../src/icons/AboutIcon.astro";
 import MessageIcon from "../../src/icons/Message.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout
@@ -19,7 +22,7 @@ import Experience from "../components/Experience.astro";
 >
 	<main class="px-4">
 		<!-- HOME -->
-		<SectionContainer class="py-8 md:py-44 md:pb-24 lg:py-44 lg:pb-24">
+		<SectionContainer class="py-8 md:py-44 md:pb-32 lg:py-44 lg:pb-32">
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-2"
 			>
@@ -58,7 +61,7 @@ import Experience from "../components/Experience.astro";
 
 		<!-- EXPERIENCE -->
 		<SectionContainer id="experience">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<ExperienceIcon class="size-5" />
 				Professional Experience
 			</h2>
@@ -67,29 +70,29 @@ import Experience from "../components/Experience.astro";
 
 		<!-- PROJECTS -->
 		<SectionContainer id="projects">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-5" />
 				Projects
 			</h2>
-			<Experience />
+			<Projects />
 		</SectionContainer>
 
 		<!-- ABOUT -->
 		<SectionContainer id="about">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<AboutIcon class="size-5" />
 				About
 			</h2>
-			<Experience />
+			<About />
 		</SectionContainer>
 
 		<!-- CONTACT -->
 		<SectionContainer id="contact">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<MessageIcon class="size-5" />
 				Contact
 			</h2>
-			<Experience />
+			<Contact />
 		</SectionContainer>
 	</main>
 </Layout>
