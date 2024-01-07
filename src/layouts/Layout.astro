@@ -17,9 +17,84 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Language" content="en" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="canonical" href="https://davidblanch.vercel.app/" />
+
+		<!-- Agrega enlaces a robots.txt y sitemap.xml -->
+		<link rel="robots" href="/robots.txt" />
+		<link
+			rel="sitemap"
+			type="application/xml"
+			title="Sitemap"
+			href="/sitemap.xml"
+		/>
+
 		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="keywords"
+			content="David, David Blanch, Portfolio, Desarrollador Web, Programador Full Stack, Proyectos Web, Programación, Desarrollo de Software, FrontEnd"
+		/>
+		<meta name="author" content="David Blanch" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="public\Portfolio.webp" />
+		<meta property="og:url" content="https://davidblanch.vercel.app/" />
+		<meta property="og:site_name" content="David's portfolio" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@Blaanch98" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="public\Portfolio.webp" />
+
+		<!-- Facebook card -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="public\Portfolio.webp" />
+		<meta property="og:url" content="https://davidblanch.vercel.app/" />
+		<meta property="og:site_name" content="David's portfolio" />
+
+		<!-- Instagram card -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="public\Portfolio.webp" />
+		<meta property="og:url" content="https://davidblanch.vercel.app/" />
+		<meta property="og:site_name" content="David's portfolio" />
+
+		<!-- Discord card -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="public\Portfolio.webp" />
+		<meta property="og:url" content="https://davidblanch.vercel.app/" />
+		<meta property="og:site_name" content="David's portfolio" />
+
+		<!-- Title -->
 		<title>{title}</title>
+
+		<!-- JSON-LD script for structured person data -->
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Person",
+				"name": "David Blanch",
+				"url": "https://davidblanch.vercel.app/",
+				"sameAs": [
+					"https://twitter.com/Blaanch98",
+					"https://www.linkedin.com/in/david-blanch-bellido/",
+					"https://github.com/DaviidBlanch",
+					"https://www.instagram.com/davidblanch98/"
+				]
+			}
+		</script>
 	</head>
 	<body class="bg-neutral-950">
 		<div
@@ -28,7 +103,7 @@ const { title, description } = Astro.props;
 		</div>
 		<Header />
 		<slot />
-		<Footer/>
+		<Footer />
 	</body>
 </html>
 <style is:global>
