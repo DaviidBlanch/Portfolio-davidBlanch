@@ -1,0 +1,20 @@
+.bg-header {
+    animation: enhance-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+}
+
+@keyframes enhance-header {
+    from{
+        border-radius: 0.5rem;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    to {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 0.5rem;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
