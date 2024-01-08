@@ -1,9 +1,9 @@
 # David's Portfolio - Web Developer and Programmer - Full Stack Developer
 
-(public\Portfolio.webp)
+![David's Portfolio](public\Portfolio.webp)
 
 <!-- TODO -->
 
-[  ] -> i18n
-[  ] -> Dark and light
-[  ] -> Responsive Mobil.
+- [  ] -> i18n
+- [  ] -> Dark and light
+- [  ] -> Responsive Mobil.
