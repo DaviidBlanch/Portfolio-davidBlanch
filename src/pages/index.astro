@@ -1,103 +1,107 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import SocialMedia from "../components/SocialMedia.astro";
-import LinkedInIcon from "../../src/icons/LinkedIn.astro";
-import GitHubIcon from "../../src/icons/GitHub.astro";
-import MailIcon from "../../src/icons/Mail.astro";
-import ExperienceIcon from "../../src/icons/Experience.astro";
-import CodeIcon from "../../src/icons/Code.astro";
-import AboutIcon from "../../src/icons/AboutIcon.astro";
-import MessageIcon from "../../src/icons/Message.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import About from "../components/About.astro";
-import Contact from "../components/Contact.astro";
+import Layout from "@layouts/Layout.astro";
+import Badge from "@components/Badge.astro";
+import SectionContainer from "@components/SectionContainer.astro";
+import SocialMedia from "@components/SocialMedia.astro";
+import LinkedInIcon from "@icons/LinkedIn.astro";
+import GitHubIcon from "@icons/GitHub.astro";
+import MailIcon from "@icons/Mail.astro";
+import ExperienceIcon from "@icons/Experience.astro";
+import CodeIcon from "@icons/Code.astro";
+import AboutIcon from "@icons/AboutIcon.astro";
+import MessageIcon from "@icons/Message.astro";
+import Experience from "@components/Experience.astro";
+import Projects from "@components/Projects.astro";
+import About from "@components/About.astro";
+import Contact from "@components/Contact.astro";
 ---
 
 <Layout
-	title="David's Portfolio - Web Developer and Programmer - Full Stack Developer"
-	description="Descubre el portafolio de David, un destacado Desarrollador Web y Programador con experiencia en Desarrollo Full Stack. Explora proyectos impresionantes, lenguajes de programación y un compromiso con soluciones de alta calidad."
+    title="David's Portfolio - Web Developer and Programmer - Full Stack Developer"
+    description="Discover the portfolio of David, a Web Developer and Programmer with experience in Full Stack Development. Explore impressive projects, programming languages and a commitment to high quality solutions."
 >
-	<main class="px-4">
-		<!-- HOME -->
-		<SectionContainer
-			id="home"
-			class="py-8 md:py-44 md:pb-32 lg:py-44 lg:pb-32"
-		>
-			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-x-4 pb-2 justify-center sm:justify-start"
-			>
-				Hello, I'm David
-				<a
-					href="https://www.linkedin.com/in/david-blanch-bellido/"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-					<Badge>Open to work</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl text-wrap max-w-[700px] text-center sm:text-left">
-				+1 year of experience. <span class="text-green-200/90"
-					>Full Stack Developer.</span
-				> From Valencia, Spain.
-			</h2>
+    <main class="px-4">
+        <!-- HOME -->
+        <SectionContainer
+            id="home"
+            class="py-8 md:py-44 md:pb-32 lg:py-44 lg:pb-32"
+        >
+            <h1
+                class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-wrap gap-x-4 pb-2 justify-center sm:justify-start"
+            >
+                Hello, I'm David
+                <a
+                    href="https://www.linkedin.com/in/david-blanch-bellido/"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex justify-center items-center"
+                >
+                    <Badge>Open to work</Badge>
+                </a>
+            </h1>
+            <h2
+                class="text-xl text-wrap max-w-[700px] text-center sm:text-left"
+            >
+                +1 year of experience. <span class="text-green-200/90"
+                    >Full Stack Developer.</span
+                > From Valencia, Spain.
+            </h2>
 
-			<!-- Badges -->
-			<nav class="flex gap-4 mt-6 flex-wrap justify-center sm:justify-start">
-				<SocialMedia
-					href="https://www.linkedin.com/in/david-blanch-bellido/"
-				>
-					<LinkedInIcon class="size-5" />
-					LinkedIn
-				</SocialMedia>
-				<SocialMedia href="https://github.com/DaviidBlanch">
-					<GitHubIcon class="size-5" />
-					GitHub
-				</SocialMedia>
-				<SocialMedia href="mailto:dablabe98@gmail.com">
-					<MailIcon class="size-5" />
-					dablabe98@gmail.com
-				</SocialMedia>
-			</nav>
-		</SectionContainer>
+            <!-- Badges -->
+            <nav
+                class="flex gap-4 mt-6 flex-wrap justify-center sm:justify-start"
+            >
+                <SocialMedia
+                    href="https://www.linkedin.com/in/david-blanch-bellido/"
+                >
+                    <LinkedInIcon class="size-5" />
+                    LinkedIn
+                </SocialMedia>
+                <SocialMedia href="https://github.com/DaviidBlanch">
+                    <GitHubIcon class="size-5" />
+                    GitHub
+                </SocialMedia>
+                <SocialMedia href="mailto:dablabe98@gmail.com">
+                    <MailIcon class="size-5" />
+                    dablabe98@gmail.com
+                </SocialMedia>
+            </nav>
+        </SectionContainer>
 
-		<!-- EXPERIENCE -->
-		<SectionContainer id="experience">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<ExperienceIcon class="size-5" />
-				Professional Experience
-			</h2>
-			<Experience />
-		</SectionContainer>
+        <!-- EXPERIENCE -->
+        <SectionContainer id="experience">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <ExperienceIcon class="size-5" />
+                Professional Experience
+            </h2>
+            <Experience />
+        </SectionContainer>
 
-		<!-- PROJECTS -->
-		<SectionContainer id="projects">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-5" />
-				Projects
-			</h2>
-			<Projects />
-		</SectionContainer>
+        <!-- PROJECTS -->
+        <SectionContainer id="projects">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <CodeIcon class="size-5" />
+                Projects
+            </h2>
+            <Projects />
+        </SectionContainer>
 
-		<!-- ABOUT -->
-		<SectionContainer id="about">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<AboutIcon class="size-5" />
-				About
-			</h2>
-			<About />
-		</SectionContainer>
+        <!-- ABOUT -->
+        <SectionContainer id="about">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <AboutIcon class="size-5" />
+                About
+            </h2>
+            <About />
+        </SectionContainer>
 
-		<!-- CONTACT -->
-		<SectionContainer id="contact">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-				<MessageIcon class="size-5" />
-				Contact
-			</h2>
-			<Contact />
-		</SectionContainer>
-	</main>
+        <!-- CONTACT -->
+        <SectionContainer id="contact">
+            <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+                <MessageIcon class="size-5" />
+                Contact
+            </h2>
+            <Contact />
+        </SectionContainer>
+    </main>
 </Layout>
