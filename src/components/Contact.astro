@@ -11,6 +11,8 @@
             type="text"
             name="text"
             id="text"
+            minlength="3"
+            maxlength="100"
             placeholder="David"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             required
@@ -26,6 +28,8 @@
             id="email"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             placeholder="dablabe98@gmail.com"
+            minlength="9"
+            maxlength="120"
             required
         />
     </div>
@@ -38,7 +42,10 @@
             name="message"
             rows="4"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
-            placeholder="Contact me"></textarea>
+            placeholder="Contact me"
+            minlength="1"
+            maxlength="500"
+            required></textarea>
     </div>
     <button
         type="submit"
