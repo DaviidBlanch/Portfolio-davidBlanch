@@ -108,15 +108,15 @@ const PROJECTS = [
 {
     PROJECTS.map((project) => (
         <article class="mb-10">
-            <h3 class="text-2xl font-semibold text-sky-300 mb-2">
+            <h3 class="text-2xl font-semibold dark:text-sky-300 text-sky-700 mb-2">
                 {project.title}
             </h3>
-            <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            <p class="text-lg mb-4 text-pretty dark:text-white">{project.description}</p>
             <ul class="flex gap-2 flex-row mb-2 flex-wrap">
                 {project.frontend.map((front) => (
                     <li>
                         <span
-                            class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${front.color}`}
+                            class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${front.color} dark:text-white`}
                         >
                             <front.icon class="size-4" />
                             {front.nombre}
@@ -126,7 +126,7 @@ const PROJECTS = [
                 {project.backend.map((back) => (
                     <li>
                         <span
-                            class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${back.color}`}
+                            class={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${back.color} dark:text-white`}
                         >
                             <back.icon class="size-4" />
                             {back.nombre}
@@ -135,7 +135,7 @@ const PROJECTS = [
                 ))}
                 <li>
                     <a
-                        class={`flex gap-x-2 rounded-full text-xs py-1 px-2`}
+                        class={`flex gap-x-2 rounded-full text-xs py-1 px-2 dark:text-white`}
                         href={project.gitHubHover}
                         target="_blank"
                         rel="noreferrer"

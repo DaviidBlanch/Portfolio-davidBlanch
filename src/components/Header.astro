@@ -1,9 +1,10 @@
 ---
 import "../style/header.css";
+import ThemeIcon from "@icons/ThemeIcon.astro"
 ---
 
 <header
-    class="bg-header flex justify-between items-center mx-auto py-3 sticky top-0 md:w-[700px] lg:w-[1000px] z-10"
+    class="bg-header flex justify-between items-center mx-auto py-3 sticky top-0 md:w-[700px] lg:w-[1000px] z-10 dark:text-white"
 >
     <a href="#home" class="hover:scale-110 transition">
         <img
@@ -12,11 +13,14 @@ import "../style/header.css";
             alt="David profile"
         />
     </a>
-    <nav class="flex flex-wrap gap-x-10 opacity-80">
+    <nav
+        class="flex flex-wrap gap-x-10 dark:opacity-80 dark:font-normal font-semibold"
+    >
         <a href="#home">Home</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <ThemeIcon />
     </nav>
 </header>

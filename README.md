@@ -5,5 +5,5 @@
 <!-- TODO -->
 
 - [  ] -> i18n
-- [  ] -> Dark and light
 - [  ] -> Responsive Mobil.
+- [  ] -> Icono.

@@ -10,16 +10,16 @@ const { date, title, description, link } = Astro.props;
 ---
 
 <div
-    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
+    class="absolute w-3 h-3 bg-gray-900 dark:bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-black dark:border-white"
 >
 </div>
-<time class="mb-1 text-sm font-normal leading-none text-gray-400">
+<time class="mb-1 text-sm font-normal leading-none dark:text-gray-400 text-gray-800">
     {date}
 </time>
-<h3 class="text-lg font-semibold text-sky-300 mt-2">
+<h3 class="text-lg font-semibold dark:text-sky-300 text-sky-700 mt-2">
     {title}
 </h3>
-<ul class="mb-4 text-base font-normal text-gray-200 text-pretty">
+<ul class="mb-4 text-base font-normal dark:text-gray-200 text-gray-800 text-pretty">
     {description.map((sentence, index) => <li>{sentence}</li>)}
 </ul>
 {
