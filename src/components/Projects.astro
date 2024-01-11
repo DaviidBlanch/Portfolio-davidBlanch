@@ -13,7 +13,6 @@ const PROJECTS = [
         description:
             "Website for technical interview questions and interviews for the developer world.",
         link: "https://devq.vercel.app/",
-        gitHub: "GitHub",
         gitHubHover: "https://github.com/DaviidBlanch/devQ",
         githubIcon: GitHubIcon,
         image: "/projects/devQ.webp",
@@ -62,9 +61,8 @@ const PROJECTS = [
         title: "4day",
         description:
             "Professional social network to promote temporary contracts and increase employability in the hospitality sector.",
-        link: "#",
-        gitHub: "GitHub",
-        githubHover: "",
+        link: "4day-frontend-usuario.vercel.app",
+        gitHubHover: "https://github.com/DaviidBlanch/4day-Frontend-Usuario",
         githubIcon: GitHubIcon,
         image: "/projects/4day.webp",
         frontend: [
@@ -135,13 +133,13 @@ const PROJECTS = [
                 ))}
                 <li>
                     <a
-                        class={`flex gap-x-2 rounded-full text-xs py-1 px-2 dark:text-white`}
+                        class="flex gap-x-2 rounded-full text-xs py-1 px-2 dark:text-white"
                         href={project.gitHubHover}
                         target="_blank"
                         rel="noreferrer"
                     >
                         <project.githubIcon class="size-4" />
-                        {project.gitHub}
+                        GitHub
                     </a>
                 </li>
             </ul>

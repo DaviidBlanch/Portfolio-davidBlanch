@@ -1,26 +1,79 @@
 ---
 import "../style/header.css";
-import ThemeIcon from "@icons/ThemeIcon.astro"
+import ThemeIcon from "@icons/ThemeIcon.astro";
+import BarIcon from "@icons/BarIcon.astro";
 ---
 
 <header
-    class="bg-header flex justify-between items-center mx-auto py-3 sticky top-0 md:w-[700px] lg:w-[1000px] z-10 dark:text-white"
+    class="bg-header flex justify-between items-center md:mx-auto py-3 sticky top-0 md:w-[700px] lg:w-[1000px] z-10 dark:text-white"
 >
+    <input type="checkbox" id="menu" hidden class="peer" />
+    <label
+        for="menu"
+        class="size-10 flex items-center justify-center z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer"
+    >
+        <BarIcon />
+    </label>
     <a href="#home" class="hover:scale-110 transition">
         <img
-            class="hidden md:block rounded-full size-5 md:size-12 lg:size-12"
+            class="rounded-full size-8 md:size-12 lg:size-12"
             src="DavidProfile.webp"
             alt="David profile"
         />
     </a>
     <nav
-        class="flex flex-wrap gap-x-10 dark:opacity-80 dark:font-normal font-semibold"
+        class="hidden md:flex flex-row gap-x-10 dark:opacity-80 dark:font-normal font-semibold"
     >
         <a href="#home">Home</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <ThemeIcon />
+    </nav>
+    <ThemeIcon />
+
+    <!-- Navbar Mobile -->
+    <nav
+        id="navbar"
+        class="min-h-screen fixed top-0 left-0 pointer-events-none opacity-0 peer-checked:opacity-100 peer-checked:pointer-events-auto right-0 z-40 flex bg-black/30 text-center justify-center flex-col transition-opacity"
+    >
+        <ul class="flex flex-col gap-y-8 text-3xl font-bold">
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </ul>
     </nav>
 </header>
+
+<script type="module">
+    const menuCheckbox = document.getElementById("menu");
+    const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Breakpoint lg
+
+    const $navbar = document.querySelector("#navbar");
+    $navbar.querySelectorAll("a").forEach((anchor) => {
+        anchor.addEventListener("click", (_event) => {
+            menuCheckbox.checked = false;
+            if (document.body.style.overflowY === "hidden") {
+                hideOverFlow(false);
+            }
+        });
+    });
+
+    /** @param {boolean} value */
+    function hideOverFlow(value) {
+        document.body.style.overflowY = value ? "hidden" : "auto";
+    }
+
+    menuCheckbox.addEventListener("change", (e) =>
+        e.target.checked ? hideOverFlow(true) : hideOverFlow(false),
+    );
+
+    mediaQuery.addEventListener("change", (e) => {
+        if (e.matches) {
+            hideOverFlow(false);
+            menuCheckbox.checked = false;
+        }
+    });
+</script>
