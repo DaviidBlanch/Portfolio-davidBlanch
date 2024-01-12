@@ -19,7 +19,7 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="Content-Language" content="en" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name='googlebot' content='index, follow' />
+		<meta name="googlebot" content="index, follow" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href="https://www.davidblanch.dev/" />
 
@@ -124,11 +124,44 @@ const { title, description } = Astro.props;
 				min-height: 100vh;
 			}
 
+			::-webkit-scrollbar {
+				display: none;
+			}
 			@media (prefers-reduced-motion: reduce) {
 				html {
 					scroll-behavior: auto;
 				}
 			}
 		</style>
+		<script type="module">
+			const menuCheckbox = document.getElementById("menu");
+			const mediaQuery = window.matchMedia("(min-width: 1024px)"); // Breakpoint lg
+
+			const $navbar = document.querySelector("#navbar");
+			$navbar.querySelectorAll("a").forEach((anchor) => {
+				anchor.addEventListener("click", (_event) => {
+					menuCheckbox.checked = false;
+					if (document.body.style.overflowY === "hidden") {
+						hideOverFlow(false);
+					}
+				});
+			});
+
+			/** @param {boolean} value */
+			function hideOverFlow(value) {
+				document.body.style.overflowY = value ? "hidden" : "auto";
+			}
+
+			menuCheckbox.addEventListener("change", (e) =>
+				e.target.checked ? hideOverFlow(true) : hideOverFlow(false),
+			);
+
+			mediaQuery.addEventListener("change", (e) => {
+				if (e.matches) {
+					hideOverFlow(false);
+					menuCheckbox.checked = false;
+				}
+			});
+		</script>
 	</body>
 </html>
