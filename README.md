@@ -1,3 +1,3 @@
-# David's Portfolio - Web Developer and Programmer - Full Stack Developer
+# David's Portfolio - Full Stack Developer - Web Developer and Programmer 
 
 ![David's Portfolio](public/Portfolio.webp)
